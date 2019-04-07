@@ -306,7 +306,7 @@ for idx,columns in enumerate(feature_data.columns):
 # In[22]:
 
 
-simFeatures = [[] for _ in range(len(range(trainData)))]
+simFeatures = [[] for _ in range(len(trainData))]
 var = {'is_pen_pressure_sim',
        'is_slantness_sim',
        'is_tilt_sim',
@@ -324,7 +324,7 @@ var = {'is_pen_pressure_sim',
        'formation_n_sim'
       }
 evidence_labels = trainData.columns[3:]
-for idx in tqdm(range(len(range(trainData)))):
+for idx in tqdm(range(len(trainData))):
     inf = mle.query(variables=var,evidence=dict(zip(evidence_labels,trainData.iloc[idx,3:].tolist())))
     for simfeature in var:
         simFeatures[idx].append(np.argmax(inf[simfeature].values))
