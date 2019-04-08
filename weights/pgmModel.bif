@@ -1,0 +1,272 @@
+network unknown {
+}
+variable constancy1 {
+    type discrete [ 2 ] { constancy1_0, constancy1_1 };
+}
+variable constancy2 {
+    type discrete [ 2 ] { constancy2_0, constancy2_1 };
+}
+variable constancy_sim {
+    type discrete [ 2 ] { constancy_sim_0, constancy_sim_1 };
+}
+variable dimension1 {
+    type discrete [ 3 ] { dimension1_0, dimension1_1, dimension1_2 };
+}
+variable dimension2 {
+    type discrete [ 3 ] { dimension2_0, dimension2_1, dimension2_2 };
+}
+variable dimension_sim {
+    type discrete [ 2 ] { dimension_sim_0, dimension_sim_1 };
+}
+variable entry_stroke_a1 {
+    type discrete [ 2 ] { entry_stroke_a1_0, entry_stroke_a1_1 };
+}
+variable entry_stroke_a2 {
+    type discrete [ 2 ] { entry_stroke_a2_0, entry_stroke_a2_1 };
+}
+variable entry_stroke_a_sim {
+    type discrete [ 2 ] { entry_stroke_a_sim_0, entry_stroke_a_sim_1 };
+}
+variable exit_stroke_d1 {
+    type discrete [ 4 ] { exit_stroke_d1_0, exit_stroke_d1_1, exit_stroke_d1_2, exit_stroke_d1_3 };
+}
+variable exit_stroke_d2 {
+    type discrete [ 4 ] { exit_stroke_d2_0, exit_stroke_d2_1, exit_stroke_d2_2, exit_stroke_d2_3 };
+}
+variable formation_n1 {
+    type discrete [ 2 ] { formation_n1_0, formation_n1_1 };
+}
+variable formation_n2 {
+    type discrete [ 2 ] { formation_n2_0, formation_n2_1 };
+}
+variable formation_n_sim {
+    type discrete [ 2 ] { formation_n_sim_0, formation_n_sim_1 };
+}
+variable is_continuous1 {
+    type discrete [ 2 ] { is_continuous1_0, is_continuous1_1 };
+}
+variable is_continuous2 {
+    type discrete [ 2 ] { is_continuous2_0, is_continuous2_1 };
+}
+variable is_continuous_sim {
+    type discrete [ 2 ] { is_continuous_sim_0, is_continuous_sim_1 };
+}
+variable is_exit_stroke_d_sim {
+    type discrete [ 2 ] { is_exit_stroke_d_sim_0, is_exit_stroke_d_sim_1 };
+}
+variable is_lowercase1 {
+    type discrete [ 2 ] { is_lowercase1_0, is_lowercase1_1 };
+}
+variable is_lowercase2 {
+    type discrete [ 2 ] { is_lowercase2_0, is_lowercase2_1 };
+}
+variable is_lowercase_sim {
+    type discrete [ 2 ] { is_lowercase_sim_0, is_lowercase_sim_1 };
+}
+variable is_pen_pressure_sim {
+    type discrete [ 2 ] { is_pen_pressure_sim_0, is_pen_pressure_sim_1 };
+}
+variable is_slantness_sim {
+    type discrete [ 2 ] { is_slantness_sim_0, is_slantness_sim_1 };
+}
+variable is_staff_of_a_sim {
+    type discrete [ 2 ] { is_staff_of_a_sim_0, is_staff_of_a_sim_1 };
+}
+variable is_staff_of_d_sim {
+    type discrete [ 2 ] { is_staff_of_d_sim_0, is_staff_of_d_sim_1 };
+}
+variable is_tilt_sim {
+    type discrete [ 2 ] { is_tilt_sim_0, is_tilt_sim_1 };
+}
+variable letter_spacing1 {
+    type discrete [ 3 ] { letter_spacing1_0, letter_spacing1_1, letter_spacing1_2 };
+}
+variable letter_spacing2 {
+    type discrete [ 3 ] { letter_spacing2_0, letter_spacing2_1, letter_spacing2_2 };
+}
+variable letter_spacing_sim {
+    type discrete [ 2 ] { letter_spacing_sim_0, letter_spacing_sim_1 };
+}
+variable pen_pressure1 {
+    type discrete [ 2 ] { pen_pressure1_0, pen_pressure1_1 };
+}
+variable pen_pressure2 {
+    type discrete [ 2 ] { pen_pressure2_0, pen_pressure2_1 };
+}
+variable size1 {
+    type discrete [ 3 ] { size1_0, size1_1, size1_2 };
+}
+variable size2 {
+    type discrete [ 3 ] { size2_0, size2_1, size2_2 };
+}
+variable size_sim {
+    type discrete [ 2 ] { size_sim_0, size_sim_1 };
+}
+variable slantness1 {
+    type discrete [ 4 ] { slantness1_0, slantness1_1, slantness1_2, slantness1_3 };
+}
+variable slantness2 {
+    type discrete [ 4 ] { slantness2_0, slantness2_1, slantness2_2, slantness2_3 };
+}
+variable staff_of_a1 {
+    type discrete [ 4 ] { staff_of_a1_0, staff_of_a1_1, staff_of_a1_2, staff_of_a1_3 };
+}
+variable staff_of_a2 {
+    type discrete [ 4 ] { staff_of_a2_0, staff_of_a2_1, staff_of_a2_2, staff_of_a2_3 };
+}
+variable staff_of_d1 {
+    type discrete [ 3 ] { staff_of_d1_0, staff_of_d1_1, staff_of_d1_2 };
+}
+variable staff_of_d2 {
+    type discrete [ 3 ] { staff_of_d2_0, staff_of_d2_1, staff_of_d2_2 };
+}
+variable tilt1 {
+    type discrete [ 2 ] { tilt1_0, tilt1_1 };
+}
+variable tilt2 {
+    type discrete [ 2 ] { tilt2_0, tilt2_1 };
+}
+variable word_formation1 {
+    type discrete [ 2 ] { word_formation1_0, word_formation1_1 };
+}
+variable word_formation2 {
+    type discrete [ 2 ] { word_formation2_0, word_formation2_1 };
+}
+variable word_formation_sim {
+    type discrete [ 2 ] { word_formation_sim_0, word_formation_sim_1 };
+}
+probability ( constancy1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( constancy2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( constancy_sim | constancy1, constancy2, size_sim ) {
+    table 0.9, 0.1, 0.9, 0.6, 0.9, 0.6, 0.7, 0.1, 0.1, 0.9, 0.1, 0.4, 0.1, 0.4, 0.3, 0.9 ;
+}
+probability ( dimension1 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( dimension2 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( dimension_sim | dimension1, dimension2 ) {
+    table 0.1, 0.8, 0.9, 0.8, 0.1, 0.8, 0.9, 0.8, 0.1, 0.9, 0.2, 0.1, 0.2, 0.9, 0.2, 0.1, 0.2, 0.9 ;
+}
+probability ( entry_stroke_a1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( entry_stroke_a2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( entry_stroke_a_sim | entry_stroke_a1, entry_stroke_a2 ) {
+    table 0.1, 0.9, 0.9, 0.1, 0.9, 0.1, 0.1, 0.9 ;
+}
+probability ( exit_stroke_d1 ) {
+    table 0.25, 0.25, 0.25, 0.25 ;
+}
+probability ( exit_stroke_d2 ) {
+    table 0.25, 0.25, 0.25, 0.25 ;
+}
+probability ( formation_n1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( formation_n2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( formation_n_sim | formation_n1, formation_n2, word_formation_sim ) {
+    table 0.7, 0.1, 0.9, 0.4, 0.9, 0.4, 0.6, 0.1, 0.3, 0.9, 0.1, 0.6, 0.1, 0.6, 0.4, 0.9 ;
+}
+probability ( is_continuous1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( is_continuous2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( is_continuous_sim | is_continuous1, is_continuous2, is_lowercase_sim ) {
+    table 0.9, 0.1, 0.9, 0.6, 0.9, 0.6, 0.9, 0.1, 0.1, 0.9, 0.1, 0.4, 0.1, 0.4, 0.1, 0.9 ;
+}
+probability ( is_exit_stroke_d_sim | entry_stroke_a_sim, exit_stroke_d1, exit_stroke_d2 ) {
+    table 0.9, 0.1, 0.9, 0.6, 0.9, 0.6, 0.9, 0.6, 0.9, 0.6, 0.4, 0.1, 0.9, 0.6, 0.9, 0.6, 0.9, 0.6, 0.9, 0.6, 0.4, 0.1, 0.9, 0.6, 0.9, 0.6, 0.9, 0.6, 0.9, 0.6, 0.4, 0.1, 0.1, 0.9, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.6, 0.9, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.6, 0.9, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.6, 0.9 ;
+}
+probability ( is_lowercase1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( is_lowercase2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( is_lowercase_sim | is_lowercase1, is_lowercase2 ) {
+    table 0.1, 0.9, 0.9, 0.1, 0.9, 0.1, 0.1, 0.9 ;
+}
+probability ( is_pen_pressure_sim | pen_pressure1, pen_pressure2 ) {
+    table 0.1, 0.9, 0.9, 0.1, 0.9, 0.1, 0.1, 0.9 ;
+}
+probability ( is_slantness_sim | slantness1, slantness2 ) {
+    table 0.1, 0.2, 0.3, 0.4, 0.2, 0.1, 0.3, 0.4, 0.3, 0.2, 0.1, 0.4, 0.4, 0.3, 0.2, 0.1, 0.9, 0.8, 0.7, 0.6, 0.8, 0.9, 0.7, 0.6, 0.7, 0.8, 0.9, 0.6, 0.6, 0.7, 0.8, 0.9 ;
+}
+probability ( is_staff_of_a_sim | staff_of_a1, staff_of_a2 ) {
+    table 0.1, 0.2, 0.3, 0.4, 0.2, 0.1, 0.3, 0.4, 0.3, 0.2, 0.1, 0.4, 0.4, 0.3, 0.2, 0.1, 0.9, 0.8, 0.7, 0.6, 0.8, 0.9, 0.7, 0.6, 0.7, 0.8, 0.9, 0.6, 0.6, 0.7, 0.8, 0.9 ;
+}
+probability ( is_staff_of_d_sim | is_staff_of_a_sim, staff_of_d1, staff_of_d2 ) {
+    table 0.4, 0.1, 0.9, 0.6, 0.9, 0.6, 0.1, 0.6, 0.4, 0.1, 0.9, 0.6, 0.9, 0.6, 0.9, 0.6, 0.4, 0.9, 0.6, 0.9, 0.1, 0.4, 0.1, 0.4, 0.9, 0.4, 0.6, 0.9, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.6, 0.1 ;
+}
+probability ( is_tilt_sim | is_slantness_sim, tilt1, tilt2 ) {
+    table 0.4, 0.1, 0.9, 0.6, 0.9, 0.6, 0.4, 0.1, 0.6, 0.9, 0.1, 0.4, 0.1, 0.4, 0.6, 0.9 ;
+}
+probability ( letter_spacing1 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( letter_spacing2 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( letter_spacing_sim | letter_spacing1, letter_spacing2 ) {
+    table 0.1, 0.8, 0.9, 0.8, 0.1, 0.8, 0.9, 0.8, 0.1, 0.9, 0.2, 0.1, 0.2, 0.9, 0.2, 0.1, 0.2, 0.9 ;
+}
+probability ( pen_pressure1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( pen_pressure2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( size1 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( size2 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( size_sim | dimension_sim, letter_spacing_sim, size1, size2 ) {
+    table 0.6, 0.3, 0.3, 0.1, 0.8, 0.7, 0.7, 0.3, 0.9, 0.8, 0.7, 0.4, 0.7, 0.6, 0.6, 0.3, 0.6, 0.3, 0.3, 0.1, 0.8, 0.4, 0.4, 0.85, 0.9, 0.8, 0.8, 0.3, 0.8, 0.4, 0.4, 0.85, 0.6, 0.3, 0.3, 0.1, 0.4, 0.7, 0.7, 0.9, 0.2, 0.3, 0.3, 0.7, 0.1, 0.2, 0.3, 0.6, 0.3, 0.4, 0.4, 0.7, 0.4, 0.7, 0.7, 0.9, 0.2, 0.6, 0.6, 0.15, 0.1, 0.2, 0.2, 0.7, 0.2, 0.6, 0.6, 0.15, 0.4, 0.7, 0.7, 0.9 ;
+}
+probability ( slantness1 ) {
+    table 0.25, 0.25, 0.25, 0.25 ;
+}
+probability ( slantness2 ) {
+    table 0.25, 0.25, 0.25, 0.25 ;
+}
+probability ( staff_of_a1 ) {
+    table 0.25, 0.25, 0.25, 0.25 ;
+}
+probability ( staff_of_a2 ) {
+    table 0.25, 0.25, 0.25, 0.25 ;
+}
+probability ( staff_of_d1 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( staff_of_d2 ) {
+    table 0.33, 0.34, 0.33 ;
+}
+probability ( tilt1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( tilt2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( word_formation1 ) {
+    table 0.5, 0.5 ;
+}
+probability ( word_formation2 ) {
+    table 0.5, 0.5 ;
+}
+probability ( word_formation_sim | constancy_sim, word_formation1, word_formation2 ) {
+    table 0.9, 0.1, 0.9, 0.7, 0.9, 0.7, 0.9, 0.1, 0.1, 0.9, 0.1, 0.3, 0.1, 0.3, 0.1, 0.9 ;
+}
